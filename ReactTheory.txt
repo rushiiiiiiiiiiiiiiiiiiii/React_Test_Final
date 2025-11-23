@@ -1,0 +1,177 @@
+1. What is React, and why is it used for building user interfaces?
+React is a javascript library it is used to build user interfaces
+we use react because it helps to build the single page applicatios using its feature like
+virtual DOM, hooks, reusable components it makes the web app more faster and efficiently
+
+2. Explain the concept of the Virtual DOM and how it improves performance.
+
+Virtual DOM is like a light-weight copy of the real DOM 
+Whenever something changes like props or state updating entire dom is not efficeient for performence and
+frequent changes so react uses concept of virtual DOM
+so react first updates the virtual dom instead of changing the old dom directly
+Then it compares old and new virtual DOM and updates only the necasary changes
+this process is called as reconcilation 
+this concepot makes chnages faster and application efficient
+
+3. What are the main differences between class components and functional
+components?
+Class components are the ES6 classes that extends React.Component and uses render methodsto
+return an react element
+
+functional components are normal javascript functions that returns a react element
+ they accept props and can use state
+Functional components have overcome the class componenets
+
+4. What is JSX, and why is it preferred over plain JavaScript?
+JSX stand for ther JavaScript XML (extensive markup language)
+JSX allows us to write html code directly into js
+It looks like html but it is written in js
+
+5. Explain the concept of “one-way data flow” in React.
+One-way data flow means data moves only in one direction
+ex from parent compoent to child component
+it is like props so the child compoentn cannot directly change the data it is read only
+one way flow maks application easy to manage
+
+6. What are props in React, and how do they differ from state?
+Props is the way to pass data from one compoennt to another component
+ex we can pass data from parent component to child component 
+this props data is read only so it can not be modify
+passing props in larger application to every level can be messy
+
+7. What is state management, and why is it important in React applications?
+state management is the process of how we control and update data that changes in our app
+it is important because when state changes our ui should also get update
+when state data get changed ouur ui also get re rendered
+
+8. What are React Hooks, and why were they introduced?
+hooks are special functions in react it includes useState, useEffect, etc
+it allow us to use state and other react features in functional components directly 
+they introdueced because
+they aloows us to use states
+make ciode simple and easy to read
+overcome the use of class components
+
+9. Explain the purpose of the useState hook.
+useState is the built in hook in react ehich is use to store and upadate the state in functional components
+useState helpsn us to update the ui based on the state chnages
+useState contains a state varible and a function to update that state
+
+10. Explain the purpose of the useEffect hook and when it is used.
+useState is the built in hook in react ehich is use to handle the side effects 
+side effect can be any chnages outaside of the functional component
+useeffect is used to run side effects like calling api, fetchig data, timers,etc
+it has 4 types of depedencies
+no depedency
+empty depedency
+single
+multiple depedency
+
+11. What are controlled and uncontrolled components in React?
+controlled components is where form input values are controlled by react itself using the state
+best when we needed to track and validate the input data
+
+uncontrolled components where input value are not handled by the react the input itself handled the state
+in this we use useRef to access those values best fot the simple forms
+
+12. What is React Context, and when should you use it?
+context is the feature in ract using which we can pass the data to every component without doing
+props drilling it avoids passing data to each component unnecessarily
+in this we pass every data to root compoennt so every child component can access that data easily
+as prop drilling can be messy for larger application so we avoid it usiong Context
+
+13. Explain what lifting state up means in React and why it is important
+
+
+14. What is component re-rendering, and what causes it in React?
+component re rendering is react re render the entire functional compoent when any data chnages
+rerendering causes when
+state changes
+props change
+forced rendered
+parent get render
+we can avoid unnecessary re-renddering using memoization methods which can imporve perrformnace optimization
+
+15. What is React’s reconciliation process?
+Whenever something changes like props or state updating entire dom is not efficeient for performence and
+frequent changes so react uses concept of virtual DOM
+so react first updates the virtual dom instead of changing the old dom directly
+Then it compares old and new virtual DOM and updates only the necasary changes
+this process is called as reconcilation it makes chnages faster and efficient
+it helps chnaging entire dom it only perform necasary chnages
+
+16. What are higher-order components (HOCs) in React?
+higher-order components are like higher-order functions
+it can take a component as a argument or input and can also returns a new component
+
+17. Explain the purpose of React Fragments.
+fragement is used to grup the react elemets together 
+it helps us to avoid using extra html tag
+ex like we use <div></div> to group the elements so instead that we can use <></> tag
+it keep structure simple and minimal
+
+
+18. What is the significance of the key prop in lists?
+when we map the array or list we use key props for each element
+as it is important because it helps react know which element is updated or removed fromt the list or array
+so it is necasary to use key prop for optimization
+
+19. What is prop drilling, and how can it be avoided?
+prop drilling means passing props data through multiple layers of components
+for ex if the sub chikld compoennt needed the prop data so we have to pass it from parent to child and then to subcjild
+this becomes messy in larger application as we pass unnecessary data to every level
+we an avoid it by using context or redux
+
+20. What is memoization in React, and why is it important?
+memoization is a optimization texhnique in react it helps to avoid unnecessary things to not happen
+like unnecessary re rendering, recalculation or function recreation
+it includes 
+React.memo()
+useMemo
+useCallback
+
+21. Explain what React Router is and why it is used.
+React Router is a library that enables the navigation in react application it enables navigation 
+from one page to another without reloading the entire page
+it includes concepts like
+BrowserRouter
+Routes
+Route
+useParams
+Link
+using redux for large application is best
+
+22. What is server-side rendering (SSR) in React, and what benefits does it provide?
+
+23. Explain the concept of lazy loading in React.
+lazy loading is the optimization technique in react 
+in which it avoid loadinf the resources or compoennts untill they are actually needed
+thi makes application more optimized and faster
+
+24. What is Redux, and why is it used alongside React?
+Redux is the feature in react it is like a big store or centralised store wher all the important data get store
+so that other functional components can easily access and modify it 
+it avoid unnecessary prop drilling and store the data in a centralised store from which all the compoenntm access
+that data easily 
+it includes
+store
+actrion
+useReducer
+Dispatch
+
+25. What are React performance optimization techniques you can apply in large application
+1. lazy loading is the optimization technique in react 
+in which it avoid loadinf the resources or compoennts untill they are actually needed
+thi makes application more optimized and faster
+
+2.memoization is a optimization texhnique in react it helps to avoid unnecessary things to not happen
+like unnecessary re rendering, recalculation or function recreation
+it includes 
+React.memo()
+useMemo
+useCallback
+
+3.Compressed images we can use comparesed images and can also implment
+lazy loading for them
+
+4.rendering large list we can avoid rendering entire list as fetching only list which needs to be display
